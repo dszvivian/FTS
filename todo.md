@@ -3,7 +3,7 @@
 
 ## RoadMap
 
-- [ ] Loading all the Documents(ie: In a Efficient way)
+- [x] Loading all the Documents(ie: In a Efficient way)
 - [ ] Buid a Time Recording Method to Record the Timing it took to find that word
 - [ ] Try Brute Force method(Looping through all the documents and searching for that word)
 - [ ] Use Regex to Faster Search
