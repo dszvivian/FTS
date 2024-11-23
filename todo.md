@@ -13,4 +13,4 @@
         - [ ] converting the text to Lowercase
         - [ ] Dropping common words in a sentence(ie: Maybe)
         - [ ] Stemming(ie: Running -> run)
-- Using the Same Tokenizer for the input Query
+- [ ] Using the Same Tokenizer for the input Query
