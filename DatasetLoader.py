@@ -30,7 +30,7 @@ class DatasetLoader:
         contents = {}
         with open(file_path,"r",encoding="utf-8") as file:
             content = file.read()
-            contents['file_path'] = file_path
+            contents["file_path"] = file_path
             contents["content"] = content
             return contents
 
