@@ -7,7 +7,10 @@ class Search:
 
     def __init__(self,query,dataset:DatasetLoader):
         self.query = query
-        self.dataset =  dataset        
+        self.documents =  dataset.documents 
+
+        self.words = set( word for document in self.documents for word in document['content'].split()) # finding unique words from the corpus
+        self.words = {index:word for index,word in enumerate(self.words)}  # assign unique number to each index
 
     @time_logger
     def brute_force(self):
@@ -22,4 +25,4 @@ class Search:
 
 
 if __name__ == "__main__":
-    Search("Synthetic ",dataset=DatasetLoader("../personal _notes")).brute_force()
+    print(Search("Synthetic ",dataset=DatasetLoader("../personal_notes")).words)

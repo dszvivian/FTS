@@ -1,5 +1,5 @@
 def textpreprocessing_pipeline(text:str):
-    return stemmer(remove_stop_words(toLower(text)))
+    return toLower(text)
 
 def toLower(text:str):
     return text.lower()

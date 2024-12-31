@@ -31,12 +31,16 @@ class DatasetLoader:
         with open(file_path,"r",encoding="utf-8") as file:
             content = file.read()
             contents["file_path"] = file_path
-            contents["content"] = content
+            
+            if content != None: 
+                contents["content"] = content
+
             return contents
 
 
 if __name__ == "__main__":
     
-    documents = DatasetLoader(path="..\personal _notes")
+    documents = DatasetLoader(path="..\personal_notes")
+    print(documents.documents)
 
 
