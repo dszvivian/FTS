@@ -73,9 +73,10 @@ def find_occurrences(word:str, document:list[str]):
 
 
 def multiply_arrays(arr1,arr2):
+    result = []
     for index in range(len(arr1)):
-        arr1[index] *= arr2[index]
-    return arr1
+        result.append(arr1[index] * arr2[index])
+    return result
 
 if __name__ == "__main__":
     embedding = Embedding(dataset=DatasetLoader("../personal_notes"))

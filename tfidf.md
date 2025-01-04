@@ -31,6 +31,14 @@ Calculating TF-IDF = TF * IDF   and Create a matrix
 - Multiply the Query against the matrix and return the top k matching rows
 
 
+Calculating the Cosine Similiarity:
+
+- Cosine represents Similiarity between two vectors
+- Reason: Cos0 = 1 and Cos1 = 1 
+- Cos(angle) = A . B / (||A|| * ||B||)
+- A . B (ie: Dot Product) [a,b,c].[d,e,f] = (a*b)+(b*e)+(d*e)  
+- ||A||(ie: Magnitude of Vector) => Sqaure root of sum of square of all the elements 
+
 References:
 
 - [David Oniani: TF-IDF from Scratch](https://www.youtube.com/watch?v=otgVLfBabKk)
