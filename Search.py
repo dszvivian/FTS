@@ -1,16 +1,19 @@
 import time
 
 from DatasetLoader import DatasetLoader
+from embedding import Embedding
 from utils.timelogger import time_logger
 
-class Search:
+class Search(Embedding):
 
     def __init__(self,query,dataset:DatasetLoader):
         self.query = query
-        self.documents =  dataset.documents 
+        super().__init__(dataset)
+        self.query_tfidf = self.calculate_tfidf(self.query)
 
-        self.words = set( word for document in self.documents for word in document['content'].split()) # finding unique words from the corpus
-        self.words = {index:word for index,word in enumerate(self.words)}  # assign unique number to each index
+
+    def cosine_similiarity(self):
+        pass
 
     @time_logger
     def brute_force(self):
@@ -25,4 +28,4 @@ class Search:
 
 
 if __name__ == "__main__":
-    print(Search("Synthetic ",dataset=DatasetLoader("../personal_notes")).words)
+    print(Search("Synthetic ",dataset=DatasetLoader("../personal_notes")).chunks)

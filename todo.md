@@ -17,3 +17,13 @@ So that You the Get the importance of these Algorithms(ie: Wikipidea dataset)
         - [ ] Dropping common words in a sentence(ie: Maybe)
         - [ ] Stemming(ie: Running -> run)
 - [ ] Using the Same Tokenizer for the input Query
+
+
+
+# Occurences where i wrote Brute Force Code:
+
+in Embeddings.py Optimize these Functions
+
+- [ ] Util Functions:
+    - [ ] Find Occurences 
+    - [ ]  Multiplying Two Arrays
