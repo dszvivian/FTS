@@ -28,18 +28,19 @@ class Search(Embedding):
     def top_k_results(self):
 
         file_name = ""
-        document_index = -1
+        line_number = -1
         similiarity = 0
 
-        for documents in self.chunks:
-            for document_index in self.chunks[documents]:
-                document_similiarity = cosine_similiarity(self.query_tfidf,self.chunks[documents][document_index]['tfidf'])
+        for file in self.chunks:
+            for document_index in self.chunks[file]:
+                document_similiarity = cosine_similiarity(self.query_tfidf,self.chunks[file][document_index]['tfidf'])
 
                 if document_similiarity >= similiarity:
-                    file_name = documents
+                    file_name = file
+                    line_number = document_index
                     similiarity = document_similiarity
 
-        return (file_name,similiarity)
+        return (file_name,similiarity,line_number)
 
                 
 
@@ -69,6 +70,8 @@ def magnitude_of_vector(vec:list):
 
 
 if __name__ == "__main__":
-    search = Search("Work Life Balance", DatasetLoader('../personal_notes'))
+    search = Search("""https://github.com/elsamuko/Shirt-without-Stripes """.split(" "), DatasetLoader('../personal_notes'))
 
-    print(search.top_k_results())
+    (file_name,similiarity,document_index) = search.top_k_results()
+
+    print(f"file_name={file_name} line_number={document_index} similiarity={similiarity}")

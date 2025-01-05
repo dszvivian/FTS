@@ -11,7 +11,11 @@ class Embedding:
         self.words = set( word for document in self.documents for word in document['content'].split())
         self.words = {index:word for index,word in enumerate(self.words)}
 
-        self.idf = self.calculate_idf()
+        # for index,word in self.words.items():
+        #     if word in {"Scripting","Unscripted"}:
+        #         print(f"{index}:{word}") 
+
+        self.idf = self.calculate_idf()        
         self.chunks =  self.split_documents_calculate_tfidf()
 
 
@@ -56,7 +60,7 @@ class Embedding:
             for line_number,content in enumerate(lines):
                 document_words = content.split(" ")
                 tfidf = self.calculate_tfidf(document_words)
-                chunks[document['file_path']][line_number] = {'content': content,'tfidf': tfidf }
+                chunks[document['file_path']][line_number] = {'content': content,'tfidf': tfidf,'line_number':line_number}
 
         return chunks
 
