@@ -24,7 +24,7 @@ So that You the Get the importance of these Algorithms(ie: Wikipidea dataset)
 
 Diffrent Ways to Tokenize:
 
-- [ ] TF-IDF from Scratch
+- [x] TF-IDF from Scratch
 
 
 
