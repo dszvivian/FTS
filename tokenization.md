@@ -47,12 +47,12 @@ Suppose We have a String:   aaabdaaabac
 
 So this is how BPE algorithm Works
 
-- [ ] Step 1:
+- [x] Step 1:
     - encode String using UTF-8 format and Store the Bytes
     - Convert the Bytes to Integer
     - And Store it as a List and Print it
 
-- [ ] Step 2:
+- [x] Step 2:
     - Create the List of all Common pairs of characters
     - Iterate consecutive elements and find all the pairs and it's Counts
     - Sorted from Highest Count to lowest

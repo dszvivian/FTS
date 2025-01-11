@@ -1,8 +1,32 @@
 
 
+class BPE:
+
+    def __init__(self,training_text:str):
+        self.training_text = training_text
+        self.utf8_encoded =  list(training_text.encode('utf-8'))
+
+        self.common_pairs = self.find_common_pairs()
+
+    def find_common_pairs(self):
+        pairs = {}
+        for b1,b2 in zip(self.utf8_encoded,self.utf8_encoded[1:]):
+            if (b1,b2) in pairs:
+                pairs[(b1,b2)] += 1
+            else:
+                pairs[(b1,b2)] = 1
+        return sorted(pairs.items(),key=lambda item:item[1],reverse=True)
+    
+    def merge(self,pair,value):
+        pass
 
 
 
+    def encode(self,text):
+        return 
+
+    def decode(self,encoded_array:list[int]):
+        pass
 
 
 
@@ -19,7 +43,6 @@ def encode(text,unicode_format):
     return list(text.encode(unicode_format))
 
 if __name__ == "__main__":
-    text = "Hello World"
-    print(f"utf-8 = {(encode(text,'utf-8'))}")
-    print(f"utf-16 = {(encode(text,'utf-16'))}")
-    print(f"utf-32 = {(encode(text,'utf-32'))}")
+    bpe = BPE("Helllo Worldo ")
+
+    print(bpe.find_common_pairs())
