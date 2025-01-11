@@ -29,8 +29,10 @@ To See the Unicode value of a String in Python:ex: Ord('z')
 
 Experiments:
 
-- [ ] See How Does a String in UTF-8, UTF-16 and UTF-32 encodes
+- [x] See How Does a String in UTF-8, UTF-16 and UTF-32 encodes
     - Code: "Hello world".encode('utf-8') ... do it simililiarly for UTF-16 and UTF-32
+    ![](assets/encodeUnicodeFormat_tokenizer.png)
+    ![](assets/encodeUnicodeFormatOutput_tokenizer.png)
 
 
 ## Byte Pair Encoding Algorithmm:
