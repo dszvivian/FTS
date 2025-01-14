@@ -57,13 +57,13 @@ So this is how BPE algorithm Works
     - Iterate consecutive elements and find all the pairs and it's Counts
     - Sorted from Highest Count to lowest
 
-- [ ] Step 3:
+- [x] Step 3:
     - function Name --> Merge
     - take the List of Original List of Charactest and replace the Most Commonly Ocuring pair of Bytes with a Different Byte Denoting that pair
     - Suppose encoding ranges from  0 - 255, You can replace Highest Occuring pair With 255+1 = 256
     - Write a Function which takes input: (original_array, pair_of_array_that_needs_to_be_replaced,value_that_will_be_replaced_with)
 
-- [ ] Step 4:
+- [x] Step 4:
     - Based on Your preference choose a Hyperparmeter --> How many times you want to conduct merge operation 
     - based on Hyperparameter loop and merge all from the Lists
 
@@ -71,7 +71,7 @@ So this is how BPE algorithm Works
     - Calculate the Compression Ratio  ie: Calculate How much have you compressed the original array
     - Come up with the formula
 
-## Here is How Our End Goal Should Look Like =:
+## Here is How Our End Goal Should Look Like:
 
 ```Python
 
