@@ -97,6 +97,30 @@ def decode(bytes:list[int]):
     - Test with Different cases to See if it Works
 
 
+## GPT series:
 
-### To Be Continued....... State of the Art Techniques
+- Instead of Naively implementing the Byte Pair Algorithm  
+We define Merging Rules on top of BPE.
+- ex: `dog` `dog?` `dog.` have completely Different meanings  
+and Should never be paired together.
+- Imporatant variables while implementing BPE:
+    - vocab  (ie: 'a':1,'b':2,...)
+    - merges (ie: 'ab':3)
+- Loop :  
+ByteEncode --> Encode  
+Decode     --> ByteDecode
 
+## Steps:
+
+-  [ ] Defining merging rules using Regex
+    - [ ] Explore the Regex used in Gpt2 
+- [ ] Use tiktoken Library and Compare the results against Different models
+- [ ] Understand the Difference b/w different Tokenizers. [tiktoken/openai_public.py](https://github.com/openai/tiktoken/blob/main/tiktoken_ext/openai_public.py)
+- Understand Differnt Special tokens in toiktoken Library.
+
+## to be continued
+
+## Rsources:'
+
+- [Language Models are Unsupervised Multitask Learners](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
+- [GPTEncoder](https://github.com/openai/gpt-2/blob/master/src/encoder.py)
